@@ -2,26 +2,89 @@
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 
 .main_container {
+  width: 1368px;
+  height: 768px;
+  margin: 0 auto;
+  position: relative;
+  transform-origin: center;
+  perspective-origin: 50% 50%;
+  perspective: 400px;
+  transform: perspective(200px);
+}
+
+.wall_container {
   width: 100%;
   height: 100%;
-  perspective: 800px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.wall_front_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  z-index: 50;
+}
+
+.wall_front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  background-color: aqua;
+  opacity: 0.2;
+}
+
+.wall_left {
+  width: 768px;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  background-color: #eee;
+  transform: rotateY(90deg);
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+}
+
+.wall_right {
+  width: 768px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform-origin: right;
+  background-color: black;
+  transform: rotateY(-90deg);
+}
+
+.wall_bottom {
+  width: 100%;
+  height: 768px;
+  position: absolute;
+}
+
+.wall_behind {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateZ(-768px);
 }
 
 .game_machine {
   /* 총세로 길이는 1023 */
   width: 100px;
   height: 213px;
-  position: relative;
+  position: absolute;
   transform-style: preserve-3d;
   /* 임시 */
   left: 400px;
   top: 300px;
   /* background-color: beige; */
-  transform: rotateX(-5deg);
+  transform: scale(0.5) translateZ(-100px);
 }
 
 .left {
