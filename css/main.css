@@ -1,4 +1,12 @@
 @charset "UTF-8";
+.glass {
+  background: rgba(2, 176, 242, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 0 0 10px 10px;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -35,8 +43,6 @@ body {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  background-color: aqua;
-  opacity: 0.2;
 }
 
 .wall_left {
@@ -45,7 +51,7 @@ body {
   position: absolute;
   transform-style: preserve-3d;
   transform-origin: left;
-  background-color: #eee;
+  background-color: #dedede;
   transform: rotateY(90deg);
   -webkit-backface-visibility: visible;
           backface-visibility: visible;
@@ -57,7 +63,7 @@ body {
   position: absolute;
   right: 0;
   transform-origin: right;
-  background-color: black;
+  background-color: #dedede;
   transform: rotateY(-90deg);
 }
 
@@ -65,13 +71,65 @@ body {
   width: 100%;
   height: 768px;
   position: absolute;
+  transform-origin: bottom;
+  transform: rotateX(90deg);
 }
 
 .wall_behind {
   width: 100%;
   height: 100%;
   position: absolute;
+  background-color: #dedede;
   transform: translateZ(-768px);
+}
+
+.wall_top {
+  width: 100%;
+  height: 768px;
+  position: absolute;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+
+.wall_front_background {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/앞면.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+}
+
+.door_container {
+  position: relative;
+  width: 95.60761347%;
+  height: 74.7395833333%;
+  margin: 0 auto;
+  top: 25.2604166667%;
+  display: flex;
+}
+
+.door {
+  width: 42.7258805513%;
+  height: 100%;
+  background-image: url(/img/문.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  bottom: -3px;
+}
+
+.glass {
+  width: 28.6370597243%;
+  height: 100%;
+}
+
+.silver_bottom {
+  background-color: #c0c0c0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2%;
+  border-radius: 100px 100px 0 0;
 }
 
 .game_machine {
