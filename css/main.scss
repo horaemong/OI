@@ -2,9 +2,10 @@
 %glass {
   background: rgba(2, 176, 242, 0.2);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(9.5px);
+  backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(9.5px);
   border-radius: 0 0 10px 10px;
+  opacity: 0.5;
   // border: 1px solid rgba(255, 255, 255, 0.18);
 }
 // 변수
@@ -37,7 +38,7 @@ body {
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  z-index: 50;
+  z-index: 20;
 }
 
 .wall_front {
@@ -71,6 +72,7 @@ body {
   position: absolute;
   transform-origin: bottom;
   transform: rotateX(90deg);
+  background-color: dimgray;
 }
 .wall_behind {
   width: 100%;
@@ -98,6 +100,7 @@ body {
 
 .door_container {
   position: relative;
+  transform-style: preserve-3d;
   width: 95.60761346998536%;
   height: 74.73958333333333%;
   margin: 0 auto;
@@ -108,10 +111,33 @@ body {
 .door {
   width: 42.72588055130168%;
   height: 100%;
+  transform-style: preserve-3d;
+  bottom: -3px;
+  display: flex;
+  // opacity: 1;
+}
+.door1 {
+  width: 50%;
+  height: 100%;
   background-image: url(/img/문.png);
   background-repeat: no-repeat;
-  background-size: contain;
-  bottom: -3px;
+  background-size: 200% 100%;
+  transform-origin: left;
+  // backdrop-filter: blur(1px);
+  // transform: rotateY(-90deg);
+  // opacity: 0.5;
+}
+.door2 {
+  width: 50%;
+  height: 100%;
+  background-image: url(/img/문.png);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transform-origin: right;
+  // transform: rotateY(90deg);
+  // backdrop-filter: blur(1px);
+  // opacity: 0.5;
 }
 .glass {
   width: 28.63705972434916%;
@@ -134,11 +160,12 @@ body {
   height: 213px;
   position: absolute;
   transform-style: preserve-3d;
+
   /* 임시 */
-  left: 400px;
-  top: 300px;
   /* background-color: beige; */
-  transform: scale(0.5) translateZ(-100px);
+  z-index: 1;
+  bottom: 75px;
+  transform: translateX(500px) translateZ(-200px);
 }
 .left {
   width: 100%;
