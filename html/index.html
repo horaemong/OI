@@ -1,110 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script>
-      (function (d) {
-        var config = {
-            kitId: "tkq2nue",
-            scriptTimeout: 3000,
-            async: true,
-          },
-          h = d.documentElement,
-          t = setTimeout(function () {
-            h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-          }, config.scriptTimeout),
-          tk = d.createElement("script"),
-          f = false,
-          s = d.getElementsByTagName("script")[0],
-          a;
-        h.className += " wf-loading";
-        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-        tk.async = true;
-        tk.onload = tk.onreadystatechange = function () {
-          a = this.readyState;
-          if (f || (a && a != "complete" && a != "loaded")) return;
-          f = true;
-          clearTimeout(t);
-          try {
-            Typekit.load(config);
-          } catch (e) {}
-        };
-        s.parentNode.insertBefore(tk, s);
-      })(document);
-    </script>
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-  </head>
-  <body>
-    <div class="main_container">
-      <!-- 로그인 화면 -->
 
-      <!-- 벽 -->
-      <div class="wall_container">
-        <!-- 가게 앞 -->
-        <div class="wall_front_container">
-          <div class="wall_front">
-            <div class="wall_front_background"></div>
-            <div class="introduce"></div>
-            <div class="door_container">
-              <div class="glass"></div>
-              <div class="door">
-                <div class="door1"></div>
-                <div class="door2"></div>
-              </div>
-              <div class="glass"></div>
-              <div class="silver_bottom"></div>
-            </div>
-          </div>
-        </div>
-        <!-- 벽 양옆, 뒤 -->
-        <div class="wall_left"></div>
-        <div class="wall_right"></div>
-        <div class="wall_behind"></div>
-        <div class="wall_bottom"></div>
-        <div class="wall_top"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    (function (d) {
+      var config = {
+          kitId: "tkq2nue",
+          scriptTimeout: 3000,
+          async: true,
+        },
+        h = d.documentElement,
+        t = setTimeout(function () {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function () {
+        a = this.readyState;
+        if (f || (a && a != "complete" && a != "loaded")) return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config);
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s);
+    })(document);
+  </script>
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
 
-        <!-- 오락기 -->
-        <div class="game_machine">
-          <div class="left"></div>
-          <div class="right"></div>
-          <div class="top2"></div>
-          <div class="top"></div>
-          <div class="pannel"></div>
-          <div class="joystick_board">
-            <div class="joystick">
-              <div class="column">
-                <div class="a one"></div>
-                <div class="a two"></div>
-                <div class="a three"></div>
-                <div class="a four"></div>
-              </div>
-              <div class="square">
-                <div class="a one"></div>
-                <div class="a two"></div>
-                <div class="a three"></div>
-                <div class="a four"></div>
-                <div class="a five"></div>
-                <div class="a six"></div>
-              </div>
+<body>
+  <div class="main_container">
+    <!-- 로그인 화면 -->
+
+    <!-- 벽 -->
+    <div class="wall_container">
+      <!-- 가게 앞 -->
+      <div class="wall_front_container">
+        <div class="wall_front">
+          <div class="wall_front_background"></div>
+          <div class="introduce"></div>
+          <div class="door_container">
+            <div class="glass"></div>
+            <div class="door">
+              <div class="door1"></div>
+              <div class="door2"></div>
             </div>
-            <div class="button red"></div>
-            <div class="button blue"></div>
-            <div class="button yellow"></div>
-            <div class="button green"></div>
+            <div class="glass"></div>
+            <div class="silver_bottom"></div>
           </div>
-          <div class="joystick_board_bottom"></div>
-          <div class="mid"></div>
-          <div class="bottom"></div>
-          <div class="bottom2"></div>
-          <div class="bottom3"></div>
         </div>
       </div>
-    </div>
+      <!-- 벽 양옆, 뒤 -->
+      <div class="wall_left"></div>
+      <div class="wall_right"></div>
+      <div class="wall_behind"></div>
+      <div class="wall_bottom"></div>
+      <div class="wall_top"></div>
 
-    <script src="/js/main.js"></script>
-  </body>
+      <!-- 오락기 -->
+
+    </div>
+  </div>
+
+  <script src="/js/gamemachine.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
